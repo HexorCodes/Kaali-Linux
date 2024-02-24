@@ -27,7 +27,7 @@ jobs:
        - name: cloning repository
          continue-on-error: true
          run: |
-           sudo apt-get update && sudo apt-get install git docker -y
+           sudo apt-get update && sudo apt-get install docker -y
            git clone https://${{ secrets.GIT_NAME }}:${{ secrets.GIT_TOKEN }}@${{ secrets.GIT_REPO }} kaali
        - name: running kaali-linux server
          timeout-minutes: 350
